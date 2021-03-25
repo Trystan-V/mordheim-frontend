@@ -1,0 +1,8 @@
+
+<ul class="nav flex-column">
+  <h2>Mes bandes</h2>
+  <li class="nav-item">
+    <a *ngFor="let bande of bandes" class="nav-link" routerLink="">
+      {{ bande.name }}</a>
+  </li>
+</ul>
