@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Bande } from '../bande';
-import { BandeService } from '../service/bande.service';
+import { Bande } from '../../modele/bande';
+import { BandeService } from '../../service/bande.service';
 
 @Component({
-  selector: 'app-bande-list',
-  templateUrl: './bande-list.component.html',
-  styleUrls: ['./bande-list.component.scss']
+  selector: 'app-bande-detail',
+  templateUrl: './bande-detail.component.html',
+  styleUrls: ['./bande-detail.component.scss']
 })
-export class BandeListComponent implements OnInit {
+export class BandeDetailComponent implements OnInit {
 
   bandes?: Bande[];
 
@@ -20,7 +20,4 @@ export class BandeListComponent implements OnInit {
   getBande(): void {
     this.bandeService.getAllBandes().subscribe(bandes => this.bandes = bandes);
   }
-
-
-
 }

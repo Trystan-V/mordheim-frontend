@@ -1,0 +1,8 @@
+<div class="bande-list">
+  <ul class="nav flex-column">
+    <h2>Mes bandes</h2>
+    <li class="nav-item" *ngFor="let bande of bandes" class="nav-link" (click)="onSelect(bande)">
+      {{ bande.name }}
+    </li>
+  </ul>
+</div>

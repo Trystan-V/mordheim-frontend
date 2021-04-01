@@ -1,4 +1,4 @@
 export class Bande {
-  idbande?: any;
+  id?: any;
   name?: string;
 }

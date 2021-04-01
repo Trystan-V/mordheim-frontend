@@ -12,6 +12,7 @@ export class BandeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){
+
   }
 
 
