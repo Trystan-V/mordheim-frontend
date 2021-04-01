@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Bande } from '../../modele/bande';
 import { BandeService } from '../../service/bande.service';
@@ -9,15 +10,14 @@ import { BandeService } from '../../service/bande.service';
 })
 export class BandeDetailComponent implements OnInit {
 
-  bandes?: Bande[];
+  @Input() bande?: Bande;
 
-  constructor(private bandeService : BandeService) { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-    this.getBande();
+    
   }
 
-  getBande(): void {
-    this.bandeService.getAllBandes().subscribe(bandes => this.bandes = bandes);
-  }
 }

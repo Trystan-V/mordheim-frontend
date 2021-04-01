@@ -8,9 +8,9 @@ import { BandeService } from '../../service/bande.service';
   styleUrls: ['./bande-list.component.scss'],
 })
 export class BandeListComponent implements OnInit {
-  bandes?: Bande[];
 
-  selectBande = Bande;
+  bandes?: Bande[];
+  selectedBande?: Bande;
 
   constructor(private bandeService: BandeService) {}
 
@@ -22,9 +22,11 @@ export class BandeListComponent implements OnInit {
     this.bandeService
       .getAllBandes()
       .subscribe((bandes) => (this.bandes = bandes));
+
   }
 
   onSelect(bande: Bande): void {
-    //this.selectBande = bande;
+    this.selectedBande = bande;
+    console.log(bande);
   }
 }

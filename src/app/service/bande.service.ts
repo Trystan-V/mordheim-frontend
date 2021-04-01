@@ -11,6 +11,7 @@ export class BandeService {
 
   private bandesUrl: string;
 
+
   constructor(
     private http: HttpClient){
       this.bandesUrl='http://localhost:8080/mordheim/mesbandes';
@@ -18,6 +19,9 @@ export class BandeService {
 
   public getAllBandes(): Observable<Bande[]> {
     return this.http.get<Bande[]>(this.bandesUrl);
+  }
 
+  public getBandesById(id: number) : Observable<Bande> {
+    return this.http.get(`${this.bandesUrl}/${id}`);
   }
 }

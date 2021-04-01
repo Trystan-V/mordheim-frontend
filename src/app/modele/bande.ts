@@ -1,4 +1,6 @@
 export class Bande {
-  id?: any;
+  id?: number;
   name?: string;
+  joueur_id?: number;
+  race_id?: number;
 }
